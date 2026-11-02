@@ -74,7 +74,7 @@ def secret():
 # Une page d'erreur 404 personnalisée
 @app.errorhandler(404)
 def page_introuvable(erreur):
-    return render_template("404.html"), 404*
+    return render_template("404.html"), *
 
 @app.get("/moi")
 def moi():
