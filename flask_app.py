@@ -64,12 +64,10 @@ def salut():
 def home():
     return redirect("/")
 
-
 # 4xx : un accès interdit
 @app.get("/secret")
 def secret():
     abort(403)
-
 
 # Une page d'erreur 404 personnalisée
 @app.errorhandler(404)
