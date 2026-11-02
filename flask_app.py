@@ -27,7 +27,17 @@ def accueil():
 
 @app.get("/presentation")
 def presentation():
-    return "Je m'appelle Jielby et je suis étudiant en informatique."
+    return """
+    <h1>GOSSE Alexandre</h1>
+    <p>Je suis étudiant en <strong>troisième année d'informatique</strong>.</p>
+    <h2>Ce que j'aime</h2>
+    <ul>
+        <li>Les jeux vidéo</li>
+        <li>Le foot</li>
+        <li>Le code (bientôt !)</li>
+    </ul>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="100">
+    """
 
 @app.get("/loisirs")
 def loisirs():
