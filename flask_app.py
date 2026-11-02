@@ -29,7 +29,7 @@ def accueil():
 def presentation():
     return render_template("presentation.html", prenom="Alexandre", nom="Gosse",
                            loisirs=["Jeux vidéo", "Musique", "Football"])
-
+    
 @app.get("/loisirs")
 def loisirs():
     return "Football et jeu video"
@@ -43,6 +43,17 @@ def calcul():
     a = int(request.args.get("a", 0))
     b = int(request.args.get("b", 0))
     return f"{a} + {b} = {a + b}"
+
+@app.get("/formulaire")
+def formulaire():
+    return render_template("formulaire.html")
+
+
+@app.get("/salut")
+def salut():
+    prenom = request.args.get("prenom", "inconnu")
+    ville = request.args.get("ville", "nulle part")
+    return f"Bonjour {prenom}, qui vient de {ville} !"
 
 # ---------------------------------------------------------------
 #  Ne pas modifier : utile seulement pour lancer le site
